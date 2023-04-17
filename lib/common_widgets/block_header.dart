@@ -9,9 +9,10 @@ class BlockHeader extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
         alignment: Alignment.centerLeft,
-        child: Text(title, style: TextStyle(
-          fontSize: screenWidth * 0.06,
-          fontWeight: FontWeight.w500
-        ),));
+        child: Text(
+          title,
+          style: TextStyle(
+              fontSize: screenWidth * 0.06, fontWeight: FontWeight.w500),
+        ));
   }
 }
