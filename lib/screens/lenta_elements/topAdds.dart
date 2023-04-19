@@ -12,23 +12,27 @@ class TopAdds extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
-          rowImage(),
-          rowImage(),
-          rowImage(),
-          rowImage(),
+          rowImage(image:'Ellipse 150.png'),
+          rowImage(image: 'moto2.png',),
+          rowImage(image: 'moto3.png',),
+          rowImage(image: 'moto4.png',),
         ],
       ),
     );
   }
 }
+
 class rowImage extends StatelessWidget {
-  const rowImage({Key? key}) : super(key: key);
+  final String image;
+
+  rowImage({required this.image});
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.all(3),
-      child: Container( // media/Ellipse 150.png
+      child: Container(
+        // media/Ellipse 150.png
         width: 110,
         height: 110,
         padding: EdgeInsets.all(3),
@@ -44,7 +48,7 @@ class rowImage extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(50.0),
           ),
-          child: Image.asset('media/Ellipse 150.png',fit: BoxFit.contain,),
+          child: Image.asset('media/${image}',fit: BoxFit.contain,),
         ),
       ),
     );
